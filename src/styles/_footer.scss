@@ -1,0 +1,67 @@
+.footer{
+    inline-size: 100%;
+ 
+
+    &__navigation{
+        padding-block-start: 5.5rem;
+        inline-size: 100%;
+        padding-block-end: 2.5rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+        background: url('../../images/bg-pattern-footer-mobile.svg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: top left;
+
+        &__social{
+            display: flex;
+            gap: 1rem;
+        }
+    }
+
+    &__cards{
+        margin-inline: 1.5rem;
+        border-block-start: 1px solid #DADADA;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        padding-block: 40px ;
+
+        &__card{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2.25rem;
+
+            h5{
+                text-transform: uppercase;
+                color: var(--Dark-Grayish-Violet);
+                font-family: 'Karla', sans-serif;
+            }
+
+            h5, a{
+                text-transform: uppercase;
+                line-height: 15.2px;
+                font-size: 13px;
+                letter-spacing: 1.5px;
+                font-weight: 700;
+            }
+
+            a{
+                color: var(--Dark-Violet);
+            }
+
+            ul{
+                display: grid;
+                gap: 1rem;
+            }
+
+            li{
+                text-align: center;
+            }
+        }
+
+    }
+}
