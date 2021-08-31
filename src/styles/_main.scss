@@ -16,8 +16,13 @@
         inline-size: 100%;  
         display: grid;
         gap: 5rem;
-        padding-block: 2.5rem;
+        padding-block-start: 2.5rem;
         position: relative;
+
+        @include tabplus{
+            padding-block-start: 5rem;
+        }
+
 
         &::before{
             content: '';
@@ -42,9 +47,9 @@
             }
 
             h2{
-                font-size: 3rem;
-                line-height: 48px;
                 letter-spacing: -0.67px;
+                font-size: clamp(3rem, 2.4718rem + 2.2535vw, 4.5rem);
+                line-height: clamp(3rem, 2.6479rem + 1.5023vw, 4rem);
             }
         }
 
@@ -116,8 +121,8 @@
         }
         
         h4{
-            font-size: 2.5rem;
-            line-height: 40px;
+            font-size: clamp(2.5rem, 2.1479rem + 1.5023vw, 3.5rem);
+            line-height: clamp(2.5rem, 2.1479rem + 1.5023vw, 3.5rem);
             letter-spacing: -0.56px;
 
             @include tabplus{
