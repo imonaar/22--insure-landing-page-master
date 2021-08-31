@@ -20,23 +20,23 @@
                     <img src="../images/logo.svg" alt="logo">
                 </a>
             </div>
-            <button class="navigation__menu js-menu-btn">
+            <button class="navigation__menu js-menu-btn" aria-controls="menu">
                 <img src="../images/icon-hamburger.svg" alt="open menu" class="open">
                 <img src="../images/icon-close.svg" alt="close menu" class="close">
             </button>
             <div class="navigation__links js-navigation-links">
-                <ul>
-                    <li class="navigation__link">
-                        <a href="#">How We Work</a>
+                <ul role="menu" id="menu">
+                    <li class="navigation__link" role="presentation">
+                        <a role="menuitem" href="#">How We Work</a>
                     </li>
-                    <li class="navigation__link">
-                        <a href="#">Blog</a>
+                    <li class="navigation__link" role="presentation">
+                        <a role="menuitem" href="#">Blog</a>
                     </li>
-                    <li class="navigation__link">
-                        <a href="#">Account</a>
+                    <li class="navigation__link" role="presentation">
+                        <a role="menuitem" href="#">Account</a>
                     </li>
-                    <li class="navigation__link">
-                        <a href="#">View Plans</a>
+                    <li class="navigation__link" role="presentation">
+                        <a role="menuitem" href="#">View Plans</a>
                     </li>
                 </ul>  
             </div>
