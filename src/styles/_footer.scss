@@ -1,5 +1,25 @@
 .footer{
     inline-size: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: url('../../images/bg-pattern-footer-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top left;
+
+    @include tabplus{
+        background: url('../../images/bg-pattern-footer-desktop.svg');
+        background-repeat: no-repeat;
+        background-position: top left;
+        margin-block-start: .625rem;
+    }
+
+    &__wrapper{
+        inline-size: 100%;
+        max-width: 69.375rem;
+    }
  
 
     &__navigation{
@@ -10,30 +30,40 @@
         align-items: center;
         flex-direction: column;
         gap: 2rem;
-        background: url('../../images/bg-pattern-footer-mobile.svg');
-        background-repeat: no-repeat;
-        background-size: 100%;
-        background-position: top left;
+      
 
         &__social{
             display: flex;
             gap: 1rem;
+        }
+
+        @include tabplus{
+            flex-direction: row;
+            justify-content: space-between;
         }
     }
 
     &__cards{
         margin-inline: 1.5rem;
         border-block-start: 1px solid #DADADA;
-        display: flex;
-        flex-direction: column;
+        display: grid;
         gap: 2.5rem;
         padding-block: 40px ;
+
+        @include tabplus{
+            grid-template-columns: repeat(4, 1fr);
+            margin-inline: 0;
+        }
 
         &__card{
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 2.25rem;
+
+            @include tabplus{
+                align-items: flex-start;
+            }
 
             h5{
                 text-transform: uppercase;
@@ -60,6 +90,10 @@
 
             li{
                 text-align: center;
+
+                @include tabplus{
+                    text-align: left;
+                }
             }
         }
 

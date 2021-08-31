@@ -4,6 +4,14 @@
     display: grid;
     gap: 8.75rem;
 
+    @include tabplus{
+        inline-size: 100%;
+        max-inline-size: 69.375rem;
+        padding-inline: 0;
+        gap: 9.875rem;
+        margin-block-start: 10.3125rem;
+    }
+
     &__cards{
         inline-size: 100%;  
         display: grid;
@@ -20,10 +28,18 @@
             block-size: 1px;
             inline-size: 150px;
             background-color: #C396C6;
+
+            @include tabplus{
+                left: 82.5px;
+            }
         }
 
         &__header{
             text-align: center;
+
+            @include tabplus{
+                text-align: left;
+            }
 
             h2{
                 font-size: 3rem;
@@ -36,6 +52,10 @@
             inline-size: 100%;
             display: grid;
             gap: 3.5rem;
+
+            @include tabplus{
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
 
         &__card{
@@ -44,6 +64,10 @@
             flex-direction: column;
             align-items: center;
             gap: 1rem;
+
+            @include tabplus{
+                align-items: flex-start;
+            }
 
             &-image{
                 block-size: 86px;
@@ -64,13 +88,18 @@
                 text-align: center;
                 color: var(--Dark-Grayish-Violet);
                 font-weight: 400;
+
+                @include tabplus{
+                    text-align: left;
+                }
             }
         }
     }
 
     &__highlight{
         inline-size: 100%;
-        padding: 4.5rem 1.5rem;
+        padding-block: 4.5rem;
+        padding-inline: clamp(1.5rem, 5%, 5rem);
         display: flex;
         flex-direction: column;
         gap: 2.5rem;
@@ -78,11 +107,23 @@
         background-color: var(--Dark-Violet);
         color: white;
         text-align: center;
+
+        @include tabplus{
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-block-start: 1.125rem;
+        }
         
         h4{
             font-size: 2.5rem;
             line-height: 40px;
             letter-spacing: -0.56px;
+
+            @include tabplus{
+                inline-size: 17ch;
+                text-align: left;
+            }
         }
     }
 }
